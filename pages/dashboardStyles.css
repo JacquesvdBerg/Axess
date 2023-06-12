@@ -1,0 +1,42 @@
+.main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 18% 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "side-bar table-area";
+}
+
+.side-bar {
+    grid-area: side-bar;
+    width: 100%;
+}
+
+.table-area {
+    grid-area: table-area;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav-bar"
+        "main-container";
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+}
+
+.main-container {
+    grid-area: main-container;
+}
+
+.active {
+    background-color: #c26328 !important;
+}
