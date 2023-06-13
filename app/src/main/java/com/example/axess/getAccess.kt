@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 class getAccess :  AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_getAccess)
+        setContentView(R.layout.activity_getaccess)
         val button = findViewById<Button>(R.id.btn_authenticate)
 
         button.setOnClickListener {

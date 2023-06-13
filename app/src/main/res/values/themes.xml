@@ -10,9 +10,4 @@
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="colorPrimaryVariant">@color/dark_orange</item>
     </style>
-<<<<<<< HEAD
-=======
-
-    <style name="Theme.Axess" parent="Base.Theme.Axess" />
->>>>>>> origin/mobile-app
 </resources>
