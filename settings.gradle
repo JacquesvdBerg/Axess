@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Axxess"
+rootProject.name = "Axess"
 include ':app'

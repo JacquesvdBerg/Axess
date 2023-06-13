@@ -1,4 +1,8 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">Axxess</string>
 
+=======
+    <string name="app_name">Axess</string>
+>>>>>>> origin/mobile-app
 </resources>
