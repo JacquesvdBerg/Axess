@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/content"
     android:background="@color/white"
-    tools:context=".getAccess">
+    tools:context=".GetAccess">
     <include layout="@layout/toolbar" />
     <Button
         android:id="@+id/btn_authenticate"
@@ -22,6 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

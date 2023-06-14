@@ -1,18 +1,23 @@
 package com.example.axess
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 
-class getAccess :  AppCompatActivity() {
+
+class GetAccess :  AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_getaccess)
         val button = findViewById<Button>(R.id.btn_authenticate)
-
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         button.setOnClickListener {
             if (isBiometricSupported()) {
                 showBiometricPrompt()
@@ -40,8 +45,9 @@ class getAccess :  AppCompatActivity() {
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
-                    // Handle authentication success
+                    loginButtonClicked()
                     showMessage("Authentication succeeded!")
+
                 }
 
                 override fun onAuthenticationFailed() {
@@ -76,5 +82,11 @@ class getAccess :  AppCompatActivity() {
                 return false
             }
         }
+    }
+    private fun loginButtonClicked() {
+
+            val intent = Intent(this, OpenDoorActivity::class.java)
+            startActivity(intent)
+
     }
 }

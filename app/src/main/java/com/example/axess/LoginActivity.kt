@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginButtonClicked() {
         button_login.setOnClickListener {
-            val intent = Intent(this, OpenDoorActivity::class.java)
+            val intent = Intent(this, GetAccess::class.java)
             startActivity(intent)
         }
     }
