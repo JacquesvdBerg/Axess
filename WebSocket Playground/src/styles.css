@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap%27');
+
+
+.door {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+
+    width: 300px;
+    height: 400px;
+    background-image: url("closedDoor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+
+    margin: 20px;
+}
+
+.open {
+    background-image: url("openDoor.png");
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}

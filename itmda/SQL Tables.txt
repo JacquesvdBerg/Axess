@@ -1,0 +1,94 @@
+CREATE TABLE admins (
+    adminID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    surname VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    image_link VARCHAR(255)
+);
+
+CREATE TABLE users (
+    userID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    surname VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    workingArea VARCHAR(255),
+    areasAccessible VARCHAR(255)
+);
+
+CREATE TABLE accountrequests (
+    requestID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    surname VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR (255),
+    workingArea VARCHAR(255),
+    areasRequested VARCHAR(255)
+);
+
+CREATE TABLE buildingareas (
+    areaID INT AUTO_INCREMENT PRIMARY KEY,
+    areaName VARCHAR(255)
+);
+
+CREATE TABLE accesslogs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userID INT,
+    areaID VARCHAR(255),
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userID) REFERENCES users(userID)
+);
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO buildingareas (areaName)
+VALUES ('serverRoom');
+
+INSERT INTO buildingareas (areaName)
+VALUES ('mainDoor');
+
+INSERT INTO buildingareas (areaName)
+VALUES ('devRoom');
+
+INSERT INTO buildingareas (areaName)
+VALUES ('switchcare');
+
+INSERT INTO buildingareas (areaName)
+VALUES ('genPop');
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO accountrequests (name, surname, email, password, workingArea, areasRequested)
+VALUES ('John', 'Doe', 'johndoe@example.com', 'password1', 'devRoom', 'mainDoor, devRoom, serverRoom');
+
+INSERT INTO accountrequests (name, surname, email, password, workingArea, areasRequested)
+VALUES ('Jane', 'Smith', 'janesmith@example.com', 'password1', 'switchcare', 'mainDoor, switchcare, serverRoom');
+
+INSERT INTO accountrequests (name, surname, email, password, workingArea, areasRequested)
+VALUES ('David', 'Johnson', 'davidjohnson@example.com', 'password1', 'genpop', 'mainDoor, genpop');
+
+INSERT INTO accountrequests (name, surname, email, password, workingArea, areasRequested)
+VALUES ('Emily', 'Davis', 'emilydavis@example.com', 'password1', 'switchcare', 'mainDoor, switchcare');
+
+INSERT INTO accountrequests (name, surname, email, password, workingArea, areasRequested)
+VALUES ('Michael', 'Wilson', 'michaelwilson@example.com', 'password1', 'devRoom', 'mainDoor, devRoom, serverRoom');
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO admins (name, surname, email, password, image_link)
+VALUES ('Jenca', 'du Toit', 'jenca@axess.co.za', 'P@ssw0rd1', '../images/jenca.jpg');
+
+INSERT INTO admins (name, surname, email, password, image_link)
+VALUES ('Inge', 'Wessels', 'inge@axess.co.za', 'P@ssw0rd2', '../images/inge.jpg');
+
+INSERT INTO admins (name, surname, email, password, image_link)
+VALUES ('Jacques', 'van den Berg', 'jacques@axess.co.za', 'P@ssw0rd3', '../images/jacques.jpg');
+
+INSERT INTO admins (name, surname, email, password, image_link)
+VALUES ('Matthew', 'Waldeck', 'matthew@axess.co.za', 'P@ssw0rd4', '../images/matthew.jpg');
+
+INSERT INTO admins (name, surname, email, password, image_link)
+VALUES ('Mathys', 'Basson', 'mathys@axess.co.za', 'P@ssw0rd5', '../images/mathys.jpg');
+
+-----------------------------------------------------------------------------------------------------------------------------------------
