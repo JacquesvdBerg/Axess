@@ -21,9 +21,9 @@
             android:layout_centerInParent="true">
 
             <ImageView
-                android:layout_width="372dp"
+                android:layout_width="340dp"
                 android:layout_height="80dp"
-                android:src="@drawable/logo"/>
+                android:src="@drawable/logo" />
 
         </LinearLayout>
 

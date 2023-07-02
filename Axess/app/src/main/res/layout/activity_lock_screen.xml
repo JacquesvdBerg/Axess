@@ -33,7 +33,7 @@
             android:textSize="18sp"
             android:text="Axess requires permission to utilize your device's biometric information." />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/button_permission"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
