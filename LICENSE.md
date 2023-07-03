@@ -1,6 +1,6 @@
 SOFTWARE LICENSE AGREEMENT
 
-This Software License Agreement (the "Agreement") is entered into as of 2023/07/03, by and between Jacques, Jenca, Mathys (the "Licensor"), and the user (the "Licensee").
+This Software License Agreement (the "Agreement") is entered into as of 2023/07/03, by and between Jacques, Jenca, Mathys, Inge-Lise (the "Licensor"), and the user (the "Licensee").
 
     GRANT OF LICENSE: Licensor grants to the Licensee a personal, non-transferable and non-exclusive right to use the Software.
 
